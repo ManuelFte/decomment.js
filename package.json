@@ -1,5 +1,5 @@
 {
-  "name": "strip-js-comments",
+  "name": "decomment.js",
   "version": "1.0.0",
   "description": "Remove all comments from modern JavaScript and TypeScript files via a simple CLI.",
   "main": "src/index.js",
@@ -7,7 +7,7 @@
     "test": "node test/run.js"
   },
   "bin": {
-    "strip-js-comments": "bin/cli.js"
+    "decommentjs": "bin/cli.js"
   },
   "files": [
     "bin",

@@ -1,4 +1,4 @@
-## strip-js-comments
+## decomment.js
 
 Remove every comment from modern JavaScript and TypeScript files with a single command. The CLI understands JSX, decorators, Flow, TypeScript, and the file extensions used across React, Next.js, and Node.js projects.
 
@@ -15,9 +15,9 @@ Remove every comment from modern JavaScript and TypeScript files with a single c
 ## Installation
 
 ```bash
-npm install --global strip-js-comments
+npm install --global decomment.js
 # or
-npx strip-js-comments --help
+npx -p decomment.js decommentjs --help
 ```
 
 ---
@@ -25,7 +25,7 @@ npx strip-js-comments --help
 ## CLI Usage
 
 ```
-Usage: strip-js-comments [options] <targets...>
+Usage: decommentjs [options] <targets...>
 
 Remove comments from modern JavaScript / TypeScript sources.
 
@@ -48,22 +48,22 @@ Supported extensions: .js, .cjs, .mjs, .jsx, .ts, .tsx, .cts, .mts
 
 ```bash
 # Preview what would change
-strip-js-comments src --dry-run
+decommentjs src --dry-run
 
 # Overwrite files in place (requires explicit flag)
-strip-js-comments src --overwrite
+decommentjs src --overwrite
 
 # Output to a sibling directory (creates it if needed)
-strip-js-comments src --out dist/stripped
+decommentjs src --out dist/stripped
 
 # Process a single file and write to another file
-strip-js-comments component.jsx --out component.strip.jsx
+decommentjs component.jsx --out component.strip.jsx
 
 # Emit JSON for scripting
-strip-js-comments app --overwrite --json --silent > report.json
+decommentjs app --overwrite --json --silent > report.json
 
 # Limit processed extensions
-strip-js-comments src --extensions .js,.jsx --overwrite
+decommentjs src --extensions .js,.jsx --overwrite
 ```
 
 ### Operational details
@@ -80,7 +80,7 @@ strip-js-comments src --extensions .js,.jsx --overwrite
 ## Node.js API
 
 ```js
-const { stripCommentsFromCode, stripPath } = require('strip-js-comments');
+const { stripCommentsFromCode, stripPath } = require('decomment.js');
 ```
 
 ### `stripCommentsFromCode(code, parserOptions?)`
@@ -141,7 +141,7 @@ Result:
 
 ```bash
 git clone <repo>
-cd strip-js-comments
+cd decomment.js
 npm install
 npm test
 ```

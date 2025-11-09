@@ -7,7 +7,7 @@ const { stripPath, SUPPORTED_EXTENSIONS } = require('../src/index.js');
 const program = new Command();
 
 program
-  .name('strip-js-comments')
+  .name('decommentjs')
   .description('Remove comments from modern JavaScript / TypeScript sources.')
   .argument('<targets...>', 'File(s) or directories to process.')
   .option('-o, --out <path>', 'Write stripped files to this path (file or directory).')
